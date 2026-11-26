@@ -182,4 +182,33 @@ SET
     select employee_id,first_name,manager_id from employee
     where manager_id is null ;
     
+    select department_id , count(*) as total_employee from employee
+    group by department_id
+    order by total_employee desc
+    limit 1;
+    
+    select department_id , count(*) as total_employee
+    from employee
+    group by department_id;
+    
+    select employee_id,first_name , salary from employee
+    where salary > 60000;
+    
+    select employee_id,first_name , salary from employee
+    where salary <= 50000;
+    
+    select employee_id, first_name, salary from employee
+    where salary between 50000 and 100000;
+    
+    select employee_id, first_name, department from employee
+    where department in ('it','hr','finance');
+    
+    select employee_id, first_name, manager_id from employee
+    where manager_id = 101;
+    
+    select employee_id, first_name , department from employee
+    where department in ('sales','marketing');
+    
+    select employee_id,first_name,department,salary from employee
+    where salary > 70000 and department in ('it');
     
