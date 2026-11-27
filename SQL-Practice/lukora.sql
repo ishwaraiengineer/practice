@@ -212,3 +212,22 @@ SET
     select employee_id,first_name,department,salary from employee
     where salary > 70000 and department in ('it');
     
+    select employee_id,first_name,department,salary from employee
+    where salary > 60000 and department in ('it','finance');
+    
+    select employee_id,first_name,department,salary from employee
+    where salary > 50000 and department not in ('it');
+    
+    select employee_id,first_name,department,salary from employee
+    where salary > 70000 and department  in ('it' ,'finance');
+    
+    select employee_id,first_name,department,salary from employee
+    where salary > 70000 and (department = 'it' or department = 'finance');
+    
+    select employee_id,first_name,bonus from employee
+    where bonus is not null;
+    select employee_id,first_name from employee
+    where first_name not like 'a%';
+    
+    select employee_id,first_name,salary from employee
+    where salary not between 40000 and 60000;
