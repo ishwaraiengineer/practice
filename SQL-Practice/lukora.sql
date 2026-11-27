@@ -231,3 +231,13 @@ SET
     
     select employee_id,first_name,salary from employee
     where salary not between 40000 and 60000;
+    
+    select employee_id,first_name,salary from employee
+    order by salary asc
+    limit 5 ;
+    
+    select distinct city from employee;
+    
+    select count(distinct department) from employee;
+    
+    
